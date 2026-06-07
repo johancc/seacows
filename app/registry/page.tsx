@@ -24,6 +24,7 @@ export default function RegistryPage() {
             </Link>
           }
           kicker="Public Registry"
+          level={1}
           title="Aquatic Bovine Sightings"
         />
         <p className="max-w-4xl leading-7 text-[var(--charcoal)]">

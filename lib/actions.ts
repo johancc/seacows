@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -224,10 +225,21 @@ export async function moderateItem(
   _previousState: FormState,
   formData: FormData,
 ): Promise<FormState> {
-  const item = stringField(formData, "item");
+  const cookieStore = await cookies();
+  if (cookieStore.get("scar_admin")?.value !== "review-authorized") {
+    return {
+      ok: false,
+      message: "Admin session is required before applying moderation actions.",
+      issues: ["Sign in to the moderation panel, then retry the action."],
+    };
+  }
+
+  const itemId = stringField(formData, "itemId");
+  const itemType = stringField(formData, "itemType");
+  const itemTitle = stringField(formData, "itemTitle");
   const action = stringField(formData, "moderationAction");
 
-  if (!item || !action) {
+  if (!itemId || !itemType || !itemTitle || !action) {
     return {
       ok: false,
       message: "Select a moderation action before submitting.",
@@ -236,20 +248,25 @@ export async function moderateItem(
   }
 
   const rustResponse = await postToRust(
-    "/api/admin/moderation-events",
+    `/api/admin/${encodeURIComponent(itemType)}/${encodeURIComponent(itemId)}/moderate`,
     {
-      item,
       action,
     },
-    { admin: true },
+    {
+      admin: true,
+      successMessage: `${itemTitle} updated: ${moderationActionLabel(action)}.`,
+    },
   );
   if (rustResponse) {
+    if (rustResponse.ok) {
+      revalidatePath("/admin");
+    }
     return rustResponse;
   }
 
   return {
     ok: true,
-    message: `${item} marked as ${action}. In the Supabase-backed deployment this action updates the moderation queue immediately.`,
+    message: `${itemTitle} updated: ${moderationActionLabel(action)}.`,
   };
 }
 
@@ -286,7 +303,7 @@ function isFileWithName(value: FormDataEntryValue): value is File {
 async function postToRust(
   path: string,
   payload: unknown,
-  options: { admin?: boolean } = {},
+  options: { admin?: boolean; successMessage?: string } = {},
 ): Promise<FormState | null> {
   const baseUrl = process.env.RUST_API_URL;
   if (!baseUrl) {
@@ -321,6 +338,7 @@ async function postToRust(
       ok: true,
       message:
         body?.message ||
+        options.successMessage ||
         "Submission received by the Rust backend for moderator review.",
     };
   } catch {
@@ -330,4 +348,8 @@ async function postToRust(
         "RUST_API_URL is set, but the Rust backend could not be reached. Start it with `npm run backend:dev` or unset RUST_API_URL for local frontend-only review.",
     };
   }
+}
+
+function moderationActionLabel(action: string) {
+  return action.replace(/_/g, " ");
 }

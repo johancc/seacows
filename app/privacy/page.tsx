@@ -7,7 +7,7 @@ export default function PrivacyPage() {
     <InfoPage
       kicker="Privacy Notice"
       paragraphs={[
-        "Public records display handles, case details, public summaries, and approved moderator notes. Private emails, private moderator notes, and IP hashes are not displayed publicly.",
+        "Public records display handles, case details, public summaries, and approved moderator notes. Moderator-only fields include private emails, private notes, and IP hashes.",
         "The MVP includes Supabase-ready schema documentation. Production deployments should configure storage policies and retention rules before accepting public uploads.",
       ]}
       sections={[
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
         },
         {
           title: "Anonymous Handles",
-          body: "Public accounts are not required for MVP submissions. Choose a handle that does not reveal private information.",
+          body: "MVP submissions accept public handles without accounts. Choose a handle that keeps private information out of the record.",
         },
       ]}
       title="Privacy"

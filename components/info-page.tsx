@@ -15,10 +15,10 @@ export function InfoPage({
     <PageShell>
       <Breadcrumbs items={[{ label: title }]} />
       <div className="space-y-5">
-        <SectionHeader kicker={kicker} title={title} />
+        <SectionHeader kicker={kicker} level={1} title={title} />
         <div className="max-w-4xl space-y-3 leading-7 text-[var(--charcoal)]">
-          {paragraphs.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
+          {paragraphs.map((paragraph, index) => (
+            <p key={`${index}-${paragraph}`}>{paragraph}</p>
           ))}
         </div>
         {sections ? (

@@ -7,7 +7,7 @@ export default function TermsPage() {
     <InfoPage
       kicker="Use Terms"
       paragraphs={[
-        "This site is an independent community archive. Registry inclusion is not a claim of institutional recognition, legal classification, veterinary assessment, or property access permission.",
+        "This site is an independent community archive. Registry inclusion means public preservation; institutional recognition, legal classification, veterinary assessment, and property access permission stay outside the file.",
         "Users are responsible for submitting lawful, safe, and non-invasive field observations.",
       ]}
       sections={[

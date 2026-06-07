@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Archive,
   BookOpen,
@@ -27,19 +28,20 @@ export function SiteHeader() {
   return (
     <header className="border-b border-[var(--line)] bg-[var(--paper)]">
       <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 text-xs text-[var(--muted)] sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <p className="uppercase tracking-[0.12em]">
-            Independent registry for aquatic bovine sightings and discussion
+        <div className="grid gap-1 sm:flex sm:flex-wrap sm:items-center sm:justify-between sm:gap-2">
+          <p className="max-w-full break-words uppercase tracking-[0.12em]">
+            Welcome back, ManateeDan.
+            <span className="hidden sm:inline"> Last visit: Today, 09:17 AM</span>
           </p>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
             <Link className="utility-link" href="/guidelines">
-              Guidelines
+              User CP
             </Link>
             <Link className="utility-link" href="/help">
-              Help
+              Private Messages: 2
             </Link>
             <Link className="utility-link" href="/contact">
-              Contact
+              Log out
             </Link>
           </div>
         </div>
@@ -52,17 +54,21 @@ export function SiteHeader() {
 
 export function Masthead() {
   return (
-    <div className="grid gap-3 border-y border-[var(--line)] py-5 sm:grid-cols-[auto_1fr] sm:items-center">
+    <div className="grid gap-2 border-y border-[var(--line)] py-3 sm:grid-cols-[auto_1fr] sm:items-center sm:gap-3 sm:py-4">
       <Link
         href="/"
         aria-label="Sea Cows Are Real home"
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-[var(--navy)] bg-[var(--paper-strong)] text-[var(--navy)]"
+        className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full border border-[var(--line-strong)] bg-white shadow-[0_6px_18px_rgba(16,35,63,0.12)] sm:h-16 sm:w-16"
       >
-        <span className="relative h-10 w-10 rounded-full border border-current">
-          <span className="absolute left-1 top-5 h-1 w-8 bg-current" />
-          <span className="absolute left-3 top-3 h-4 w-5 rounded-[50%] border border-current bg-[var(--paper-strong)]" />
-          <span className="absolute right-2 top-2 h-2 w-2 rounded-full border border-current bg-[var(--paper-strong)]" />
-        </span>
+        <Image
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-cover"
+          height={128}
+          priority
+          src="/images/seacow-emblem.png"
+          width={128}
+        />
       </Link>
       <div>
         <p className="text-xs uppercase tracking-[0.24em] text-[var(--burgundy)]">
@@ -70,13 +76,10 @@ export function Masthead() {
         </p>
         <Link
           href="/"
-          className="font-serif text-[2.4rem] font-bold leading-none tracking-normal text-[var(--navy)] sm:text-6xl"
+          className="font-serif text-[1.55rem] font-bold leading-none tracking-normal text-[var(--navy)] sm:text-4xl"
         >
           SEA COWS ARE REAL
         </Link>
-        <p className="mt-2 font-serif text-lg text-[var(--charcoal)]">
-          Classification remains disputed.
-        </p>
       </div>
     </div>
   );
@@ -85,13 +88,13 @@ export function Masthead() {
 export function NavBar() {
   return (
     <nav aria-label="Primary navigation" className="bg-[var(--navy)] text-white">
-      <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <div className="flex flex-wrap gap-1">
+      <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-2 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div className="flex gap-1 overflow-x-auto pb-1 sm:flex-wrap sm:overflow-visible sm:pb-0">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
               <Link
-                className="flex items-center gap-1.5 border border-transparent px-3 py-2 text-sm font-semibold hover:border-white/30 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white"
+                className="flex shrink-0 items-center gap-1.5 border border-transparent px-2.5 py-1.5 text-sm font-semibold hover:border-white/30 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white sm:px-3 sm:py-2"
                 href={item.href}
                 key={item.href}
               >
@@ -101,18 +104,22 @@ export function NavBar() {
             );
           })}
         </div>
-        <form className="flex min-w-0 max-w-md flex-1 items-center border border-white/25 bg-white/10 lg:max-w-xs">
+        <div
+          aria-disabled="true"
+          className="hidden min-w-0 max-w-md flex-1 items-center border border-white/25 bg-white/10 sm:flex lg:max-w-xs"
+        >
           <label className="sr-only" htmlFor="site-search">
-            Search the archive
+            Search index pending
           </label>
           <Search aria-hidden="true" className="ml-3 shrink-0" size={16} />
           <input
+            disabled
             id="site-search"
             name="q"
-            placeholder="Search archive"
-            className="min-w-0 flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/70 focus:outline-none"
+            placeholder="Search index pending"
+            className="min-w-0 flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder:text-white/70 focus:outline-none disabled:cursor-not-allowed"
           />
-        </form>
+        </div>
       </div>
     </nav>
   );
@@ -123,12 +130,13 @@ export function SiteFooter() {
     <footer className="mt-10 border-t border-[var(--line)] bg-[var(--paper-strong)]">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 text-sm text-[var(--charcoal)] sm:px-6 md:grid-cols-[1.3fr_1fr] lg:px-8">
         <div>
-          <p className="font-serif text-2xl font-bold text-[var(--navy)]">
+          <p className="font-serif text-xl font-bold text-[var(--navy)]">
             SEA COWS ARE REAL
           </p>
           <p className="mt-2 max-w-2xl">
-            Sea Cows Are Real is an independent community registry.
-            Classification remains disputed.
+            Sea Cows Are Real keeps the Lorida file, case notes, forum
+            arguments, and old waterline reports in one place so nobody has to
+            re-litigate the same flat-water story from memory.
           </p>
         </div>
         <div className="flex flex-wrap items-start gap-3 md:justify-end">
@@ -175,7 +183,7 @@ export function SidebarBox({
   action?: React.ReactNode;
 }) {
   return (
-    <section className="border border-[var(--line)] bg-[var(--paper)]">
+    <section className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--paper)] shadow-[0_8px_24px_rgba(16,35,63,0.045)]">
       <div className="flex items-center justify-between gap-3 border-b border-[var(--line)] bg-[var(--paper-strong)] px-3 py-2">
         <h2 className="text-sm font-bold uppercase tracking-[0.08em] text-[var(--navy)]">
           {title}
@@ -191,27 +199,38 @@ export function DefaultSidebar() {
   return (
     <aside className="space-y-4">
       <SidebarBox title="Search the Archive">
-        <form className="flex border border-[var(--line)] bg-white">
+        <div className="flex overflow-hidden rounded-md border border-[var(--line)] bg-white" aria-disabled="true">
           <label className="sr-only" htmlFor="sidebar-search">
-            Search by case, location, or term
+            Search index pending
           </label>
           <input
+            disabled
             id="sidebar-search"
             name="q"
-            placeholder="case, location, term"
-            className="min-w-0 flex-1 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--burgundy)]"
+            placeholder="search index pending"
+            className="min-w-0 flex-1 px-3 py-2 text-sm disabled:cursor-not-allowed"
           />
-          <button className="border-l border-[var(--line)] px-3 text-[var(--navy)]" type="submit">
+          <button
+            aria-disabled="true"
+            className="border-l border-[var(--line)] px-3 text-[var(--navy)] opacity-60"
+            disabled
+            type="button"
+          >
             <Search aria-hidden="true" size={16} />
             <span className="sr-only">Search</span>
           </button>
-        </form>
+        </div>
+        <p className="mt-2 text-xs text-[var(--muted)]">
+          Try case number, handle, water type, or the one weird phrase you
+          remember from the thread title. Search is still half duct tape.
+        </p>
       </SidebarBox>
 
       <SidebarBox title="Report a Sighting">
         <p>
-          Saw one in water? Start with what you actually saw. Guesswork goes in
-          the notes, not the title.
+          First-hand sighting or useful follow-up? Include waterline detail,
+          duration, return path, sound conditions, and the part you are not
+          sure about.
         </p>
         <Link className="button-primary mt-3 w-full justify-center" href="/report">
           Report a Sighting
@@ -243,16 +262,16 @@ export function DefaultSidebar() {
 
       <SidebarBox title="Mission Statement">
         <p>
-          We keep the reports people were told not to bother writing down:
-          cows in ponds, lakes, canals, floodwater, reservoir edges, and the
-          occasional case where the animal seems equally at home on land and
-          below the surface.
+          Keep the Lorida file readable. Do not turn every report into
+          &quot;just a cow&quot; or &quot;just a manatee.&quot; If the animal used
+          both land and water, write both parts down.
         </p>
       </SidebarBox>
 
-      <SidebarBox title="Recently Active Members">
+      <SidebarBox title="Who's Online">
+        <p>38 members, 14 guests, 2 bots</p>
         <ul className="space-y-1">
-          {["PastureArchivist", "LakeWatcher", "TaxonomyDesk", "CanalDesk", "GrassFedFacts"].map(
+          {["ManateeDan", "CreekWalker", "HoofandFloat", "OldSalt", "BoggyBottom"].map(
             (handle) => (
               <li className="flex items-center gap-2" key={handle}>
                 <ShieldCheck aria-hidden="true" className="text-[var(--green)]" size={14} />
@@ -265,12 +284,11 @@ export function DefaultSidebar() {
 
       <SidebarBox title="Classification Note">
         <p>
-          Manatees are already called sea cows. Fine. This board exists for the
-          other reports, the ones where the animal has hooves and the water is
-          not incidental.
+          Yes, everyone here knows about manatees. This archive is for hoofed
+          reports where the water behavior matters.
         </p>
         <p className="mt-2 font-semibold text-[var(--burgundy)]">
-          The category remains open.
+          Land movement is sequence evidence. Flat water is context.
         </p>
       </SidebarBox>
     </aside>
@@ -311,11 +329,15 @@ export function SectionHeader({
   title,
   kicker,
   action,
+  level = 2,
 }: {
   title: string;
   kicker?: string;
   action?: React.ReactNode;
+  level?: 1 | 2 | 3;
 }) {
+  const Heading = level === 1 ? "h1" : level === 3 ? "h3" : "h2";
+
   return (
     <div className="flex flex-wrap items-end justify-between gap-3 border-b border-[var(--line)] pb-2">
       <div>
@@ -324,9 +346,9 @@ export function SectionHeader({
             {kicker}
           </p>
         ) : null}
-        <h1 className="font-serif text-3xl font-bold tracking-normal text-[var(--navy)]">
+        <Heading className="font-serif text-2xl font-bold leading-tight tracking-normal text-[var(--navy)] sm:text-[1.75rem]">
           {title}
-        </h1>
+        </Heading>
       </div>
       {action}
     </div>
@@ -342,10 +364,10 @@ export function Notice({
 }) {
   const toneClass =
     tone === "green"
-      ? "border-[var(--green)] bg-[#edf4ee] text-[var(--green)]"
+      ? "border-[var(--green)] bg-[#e5f1ec] text-[var(--green)]"
       : tone === "slate"
-        ? "border-[var(--slate)] bg-[#eef1f2] text-[var(--navy)]"
-        : "border-[var(--amber)] bg-[#f8efd9] text-[var(--navy)]";
+        ? "border-[var(--slate)] bg-[#e8eff0] text-[var(--navy)]"
+        : "border-[var(--amber)] bg-[#e8edf5] text-[var(--navy)]";
 
-  return <div className={`border-l-4 px-4 py-3 text-sm ${toneClass}`}>{children}</div>;
+  return <div className={`rounded-md border-l-4 px-4 py-3 text-sm ${toneClass}`}>{children}</div>;
 }

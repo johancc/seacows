@@ -5,12 +5,12 @@ import type { Article } from "@/lib/types";
 
 export function ArticleCard({ article }: { article: Article }) {
   return (
-    <article className="border border-[var(--line)] bg-[var(--paper)]">
+    <article className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--paper)] shadow-[0_8px_24px_rgba(16,35,63,0.04)]">
       <div className="border-b border-[var(--line)] bg-[var(--paper-strong)] px-4 py-3">
         <p className="text-xs font-bold uppercase tracking-[0.12em] text-[var(--burgundy)]">
           {article.category}
         </p>
-        <h2 className="mt-1 font-serif text-2xl font-bold text-[var(--navy)]">
+        <h2 className="mt-1 font-serif text-xl font-bold text-[var(--navy)]">
           <Link href={`/research/${article.slug}`} className="hover:text-[var(--burgundy)]">
             {article.title}
           </Link>
@@ -37,15 +37,15 @@ export function ArticleCard({ article }: { article: Article }) {
 
 export function ArticleLayout({ article }: { article: Article }) {
   return (
-    <article className="border border-[var(--line)] bg-[var(--paper)]">
+    <article className="overflow-hidden rounded-md border border-[var(--line)] bg-[var(--paper)] shadow-[0_8px_24px_rgba(16,35,63,0.04)]">
       <header className="border-b border-[var(--line)] bg-[var(--paper-strong)] p-5">
         <p className="text-xs font-bold uppercase tracking-[0.14em] text-[var(--burgundy)]">
           {article.category}
         </p>
-        <h1 className="mt-2 max-w-4xl font-serif text-4xl font-bold leading-tight text-[var(--navy)]">
+        <h1 className="mt-2 max-w-4xl font-serif text-3xl font-bold leading-tight text-[var(--navy)]">
           {article.title}
         </h1>
-        <p className="mt-3 max-w-3xl font-serif text-xl leading-8 text-[var(--charcoal)]">
+        <p className="mt-3 max-w-3xl font-serif text-lg leading-8 text-[var(--charcoal)]">
           {article.subtitle}
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-[var(--muted)]">
@@ -60,21 +60,22 @@ export function ArticleLayout({ article }: { article: Article }) {
       </header>
       <div className="grid gap-6 p-5 lg:grid-cols-[1fr_16rem]">
         <div className="prose-archive max-w-none">
-          <div className="mb-6 border-l-4 border-[var(--burgundy)] bg-white px-4 py-3">
+          <div className="mb-6 rounded-r-md border-l-4 border-[var(--burgundy)] bg-white px-4 py-3">
             <h2>Abstract</h2>
             <p>{article.abstract}</p>
           </div>
           {article.sections.map((section) => (
             <section key={section.heading}>
               <h2>{section.heading}</h2>
-              {section.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+              {section.paragraphs.map((paragraph, index) => (
+                <p key={`${section.heading}-${index}-${paragraph}`}>{paragraph}</p>
               ))}
             </section>
           ))}
           {article.table ? (
             <div className="my-6 overflow-x-auto">
               <table className="forum-table">
+                <caption className="sr-only">{article.title} data table</caption>
                 <thead>
                   <tr>
                     {article.table.headers.map((header) => (
@@ -98,7 +99,7 @@ export function ArticleLayout({ article }: { article: Article }) {
           ) : null}
         </div>
         <aside className="space-y-4">
-          <div className="border border-[var(--line)] bg-[var(--paper-strong)] p-3">
+          <div className="rounded-md border border-[var(--line)] bg-[var(--paper-strong)] p-3">
             <h2 className="section-title">Archive Metadata</h2>
             <dl className="mt-3 space-y-2 text-sm">
               <div>
@@ -118,15 +119,15 @@ export function ArticleLayout({ article }: { article: Article }) {
                   Registry phrase
                 </dt>
                 <dd className="font-semibold text-[var(--burgundy)]">
-                  The category remains open.
+                  File still open.
                 </dd>
               </div>
             </dl>
           </div>
-          <div className="border border-[var(--line)] bg-white p-3 text-sm leading-6 text-[var(--charcoal)]">
-            This article is part of the public archive. It is not a claim of
-            institutional recognition. It preserves terminology, field methods,
-            and classification discussion for community review.
+          <div className="rounded-md border border-[var(--line)] bg-white p-3 text-sm leading-6 text-[var(--charcoal)]">
+            This article belongs to the public archive. It preserves
+            terminology, field methods, and classification discussion for the
+            next person who asks why the wet cow report has nowhere to go.
           </div>
         </aside>
       </div>

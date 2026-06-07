@@ -52,9 +52,10 @@ export default async function CategoryPage({
             </a>
           }
           kicker="Forum Category"
+          level={1}
           title={category.name}
         />
-        <div className="border border-[var(--line)] bg-[var(--paper)] p-4">
+        <div className="rounded-md border border-[var(--line)] bg-[var(--paper)] p-4 shadow-[0_8px_24px_rgba(16,35,63,0.04)]">
           <p className="max-w-4xl leading-7 text-[var(--charcoal)]">
             {category.description}
           </p>

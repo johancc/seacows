@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import { Send, Upload } from "lucide-react";
 
 import {
@@ -17,10 +17,25 @@ const initialFormState: FormState = { ok: false, message: "" };
 
 export function ReportSightingForm() {
   const [state, formAction, pending] = useActionState(submitSighting, initialFormState);
+  const [hiddenErrorMessage, setHiddenErrorMessage] = useState("");
+
+  const visibleState =
+    hiddenErrorMessage && !state.ok && hiddenErrorMessage === state.message
+      ? initialFormState
+      : state;
 
   return (
-    <form action={formAction} className="form-panel">
-      <FormStatus state={state} />
+    <form
+      action={formAction}
+      className="form-panel"
+      onChange={() => {
+        if (state.message && !state.ok) {
+          setHiddenErrorMessage(state.message);
+        }
+      }}
+      onSubmit={() => setHiddenErrorMessage("")}
+    >
+      <FormStatus state={visibleState} />
       <div className="grid gap-4 md:grid-cols-2">
         <TextField label="Reporter handle" name="reporterHandle" required />
         <TextField label="Optional email, private" name="reporterEmail" type="email" />
@@ -93,13 +108,13 @@ export function ReportSightingForm() {
             maxLength={4000}
             name="description"
             required
-            placeholder="What did you see? Start with the waterline. Include distance, behavior, how long it lasted, and the parts you are not sure about."
+            placeholder="What did you see? Include the waterline, distance, behavior, duration, return path, and what you could not tell."
           />
         </label>
         <label className="form-label md:col-span-2">
           <span className="flex items-center gap-2">
             <Upload aria-hidden="true" size={16} />
-            Evidence upload
+            Evidence metadata upload
           </span>
           <input
             accept="image/*"
@@ -109,8 +124,8 @@ export function ReportSightingForm() {
             type="file"
           />
           <small className="text-[var(--muted)]">
-            Images only. Max 6 MB each. Wide, boring photos are often better
-            than dramatic close crops.
+            MVP storage records file names, types, and sizes only. Images should
+            stay under 6 MB each once object storage is connected.
           </small>
         </label>
       </div>
@@ -135,10 +150,25 @@ export function ReportSightingForm() {
 
 export function ThreadForm({ categorySlug }: { categorySlug?: string }) {
   const [state, formAction, pending] = useActionState(submitThread, initialFormState);
+  const [hiddenErrorMessage, setHiddenErrorMessage] = useState("");
+
+  const visibleState =
+    hiddenErrorMessage && !state.ok && hiddenErrorMessage === state.message
+      ? initialFormState
+      : state;
 
   return (
-    <form action={formAction} className="form-panel">
-      <FormStatus state={state} />
+    <form
+      action={formAction}
+      className="form-panel"
+      onChange={() => {
+        if (state.message && !state.ok) {
+          setHiddenErrorMessage(state.message);
+        }
+      }}
+      onSubmit={() => setHiddenErrorMessage("")}
+    >
+      <FormStatus state={visibleState} />
       <div className="grid gap-4 md:grid-cols-2">
         <SelectField
           label="Forum category"
@@ -160,7 +190,7 @@ export function ThreadForm({ categorySlug }: { categorySlug?: string }) {
             className="form-field min-h-36"
             maxLength={3500}
             name="body"
-            placeholder="Make the claim, give the context, and say what you want the board to help sort out."
+            placeholder="Say what happened, what you know, what you don't know, and where people should start poking holes."
             required
           />
         </label>
@@ -168,7 +198,7 @@ export function ThreadForm({ categorySlug }: { categorySlug?: string }) {
       <input aria-hidden="true" className="hidden" name="homepage" tabIndex={-1} />
       <button className="button-primary" disabled={pending} type="submit">
         <Send aria-hidden="true" size={16} />
-        {pending ? "Submitting" : "Start Thread"}
+        {pending ? "Posting" : "Post New Topic"}
       </button>
     </form>
   );
@@ -176,11 +206,26 @@ export function ThreadForm({ categorySlug }: { categorySlug?: string }) {
 
 export function ReplyForm({ threadSlug }: { threadSlug: string }) {
   const [state, formAction, pending] = useActionState(submitReply, initialFormState);
+  const [hiddenErrorMessage, setHiddenErrorMessage] = useState("");
+
+  const visibleState =
+    hiddenErrorMessage && !state.ok && hiddenErrorMessage === state.message
+      ? initialFormState
+      : state;
 
   return (
-    <form action={formAction} className="form-panel">
+    <form
+      action={formAction}
+      className="form-panel"
+      onChange={() => {
+        if (state.message && !state.ok) {
+          setHiddenErrorMessage(state.message);
+        }
+      }}
+      onSubmit={() => setHiddenErrorMessage("")}
+    >
       <input name="threadSlug" type="hidden" value={threadSlug} />
-      <FormStatus state={state} />
+      <FormStatus state={visibleState} />
       <div className="grid gap-4 md:grid-cols-2">
         <TextField label="Handle" name="handle" required />
         <TextField label="Optional email, private" name="email" type="email" />
@@ -190,7 +235,7 @@ export function ReplyForm({ threadSlug }: { threadSlug: string }) {
             className="form-field min-h-32"
             maxLength={2500}
             name="body"
-            placeholder="Reply with evidence, a classification point, or a useful objection. One-line dunking gets rejected."
+            placeholder="Evidence, useful objection, correction, or a normal reply. One-line dunking still gets tossed."
             required
           />
         </label>
@@ -198,7 +243,7 @@ export function ReplyForm({ threadSlug }: { threadSlug: string }) {
       <input aria-hidden="true" className="hidden" name="company" tabIndex={-1} />
       <button className="button-primary" disabled={pending} type="submit">
         <Send aria-hidden="true" size={16} />
-        {pending ? "Submitting" : "Submit Reply"}
+        {pending ? "Posting" : "Post Reply"}
       </button>
     </form>
   );
@@ -208,7 +253,7 @@ export function AdminLoginForm({ error }: { error?: boolean }) {
   return (
     <form action={adminLogin} className="form-panel max-w-md">
       {error ? (
-        <div className="border border-[#c98e8e] bg-[#f2dddd] px-3 py-2 text-sm text-[#8f1f1f]">
+        <div className="rounded-md border border-[#c98e8e] bg-[#f2dddd] px-3 py-2 text-sm text-[#8f1f1f]">
           Password not recognized.
         </div>
       ) : null}
@@ -220,22 +265,38 @@ export function AdminLoginForm({ error }: { error?: boolean }) {
   );
 }
 
-export function AdminModerationForm({ item }: { item: string }) {
+export function AdminModerationForm({
+  itemId,
+  itemType,
+  itemTitle,
+}: {
+  itemId: string;
+  itemType: "sighting" | "thread" | "reply";
+  itemTitle: string;
+}) {
   const [state, formAction, pending] = useActionState(moderateItem, initialFormState);
+  const actionId = `moderation-${itemType}-${itemId.replace(/[^a-zA-Z0-9_-]/g, "-")}`;
 
   return (
     <form action={formAction} className="space-y-2">
-      <input name="item" type="hidden" value={item} />
-      <label className="sr-only" htmlFor={`action-${item}`}>
-        Moderation action for {item}
+      <input name="itemId" type="hidden" value={itemId} />
+      <input name="itemType" type="hidden" value={itemType} />
+      <input name="itemTitle" type="hidden" value={itemTitle} />
+      <label className="sr-only" htmlFor={actionId}>
+        Moderation action for {itemTitle}
       </label>
-      <select className="form-field" id={`action-${item}`} name="moderationAction" required>
+      <select className="form-field" id={actionId} name="moderationAction" required>
         <option value="">Select action</option>
-        <option value="approved">Approve</option>
-        <option value="rejected">Reject</option>
-        <option value="under review">Mark under review</option>
-        <option value="pinned">Pin thread</option>
-        <option value="locked">Lock thread</option>
+        <option value="approve">Approve</option>
+        <option value="reject">Reject</option>
+        <option value="mark_under_review">Mark under review</option>
+        {itemType === "thread" ? (
+          <>
+            <option value="pin">Pin thread</option>
+            <option value="lock">Lock thread</option>
+          </>
+        ) : null}
+        <option value="archive">Archive</option>
       </select>
       <button className="button-secondary w-full justify-center" disabled={pending} type="submit">
         Apply
@@ -252,10 +313,10 @@ function FormStatus({ state, compact = false }: { state: FormState; compact?: bo
 
   return (
     <div
-      className={`border px-3 py-2 text-sm ${
+      className={`rounded-md border px-3 py-2 text-sm ${
         state.ok
           ? "border-[#9bb69f] bg-[#e7efe8] text-[var(--green)]"
-          : "border-[#d5b073] bg-[#f6ecd6] text-[var(--navy)]"
+          : "border-[#8da7c4] bg-[#e8edf5] text-[var(--navy)]"
       } ${compact ? "text-xs" : ""}`}
       role="status"
     >

@@ -1,5 +1,19 @@
 services:
   - type: web
+    name: seacows-site
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: RUST_API_URL
+        value: https://seacows-api.onrender.com
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: NODE_VERSION
+        value: 22.16.0
+
+  - type: web
     name: seacows-api
     runtime: rust
     rootDir: backend

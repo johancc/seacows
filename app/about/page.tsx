@@ -7,18 +7,18 @@ export default function AboutPage() {
     <InfoPage
       kicker="Institutional Note"
       paragraphs={[
-        "Sea Cows Are Real is an independent community registry dedicated to documenting aquatic bovine sightings, preserving field reports, and supporting open discussion around disputed classification.",
-        "The site recognizes conventional sirenian usage while maintaining that aquatic bovine sightings represent a separate and insufficiently documented category.",
-        "The current working model allows for dual-habitat interpretation where a subject appears capable of ordinary terrestrial presence and meaningful aquatic occupancy.",
+        "Sea Cows Are Real keeps the Lorida file, the public ledger, the argument threads, and the classification notes in one place.",
+        "New readers should begin with the pinned forum post and the other-shore field note. The registry treats terminology as a recordkeeping problem, not a substitute for field detail.",
+        "Working model: some cattle remain pasture animals, some enter water by accident, and a few reports describe subjects that move between both categories without belonging cleanly to either.",
       ]}
       sections={[
         {
           title: "Core Position",
-          body: "Sea cows are real. The mainstream definition has simply been incomplete.",
+          body: "The archive starts from field reports and works outward. Lorida stays central because the witnesses described cow-shaped subjects away from shore, not a tidy manatee correction.",
         },
         {
-          title: "Registry Boundary",
-          body: "Registry inclusion is not a claim of institutional recognition. It is a public archive decision.",
+          title: "The Other Shore",
+          body: "The phrase is treated as local field language, not a status label. It describes the disputed middle: no longer ordinary owned cattle, not ordinary wildlife either.",
         },
       ]}
       title="About Sea Cows Are Real"

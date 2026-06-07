@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 
+import { PrelaunchGate } from "@/components/prelaunch-gate";
+
 import "./globals.css";
 
 const sourceSans = Source_Sans_3({
@@ -56,7 +58,9 @@ export default function RootLayout({
       lang="en"
       className={`${sourceSans.variable} ${libreBaskerville.variable} ${geistMono.variable} h-full`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <PrelaunchGate>{children}</PrelaunchGate>
+      </body>
     </html>
   );
 }

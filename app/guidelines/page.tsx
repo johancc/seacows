@@ -7,18 +7,22 @@ export default function GuidelinesPage() {
     <InfoPage
       kicker="Community Standards"
       paragraphs={[
-        "Discussion should remain focused on sightings, terminology, field methods, evidence, and classification. Speculative topics are allowed when clearly labeled.",
+        "Keep threads anchored to sightings, terminology, field methods, evidence, and classification. Speculation must stay in clearly labeled threads.",
         "Do not harass witnesses, property owners, moderators, livestock handlers, manatee advocates, or users asking difficult terminology questions.",
-        "The category remains open, but the archive still has standards.",
+        "Bring a scene the board can reconstruct. The naming argument already has enough furniture in it.",
       ]}
       sections={[
         {
           title: "No Overclaiming",
-          body: "A public thread is not a confirmed case file. Treat uncertain material as uncertain.",
+          body: "A public thread is a thread. A confirmed case file needs evidence, status, and moderator review.",
         },
         {
           title: "Field Safety",
-          body: "Do not approach livestock, enter water, trespass, or compromise animal welfare for documentation.",
+          body: "Do not approach livestock, enter water, trespass, use lights or motors to force a reaction, bring cattle to the waterline, or compromise animal welfare for documentation.",
+        },
+        {
+          title: "No Proof Hunts",
+          body: "Planned attempts to provoke sightings, calls, bumps, or cattle response are not field work. The archive wants observations, not stunts.",
         },
       ]}
       title="Community Guidelines"
