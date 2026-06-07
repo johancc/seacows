@@ -296,6 +296,7 @@ fn build_app(admin_password: String) -> Router {
     };
 
     Router::new()
+        .route("/", get(health))
         .route("/health", get(health))
         .route("/api/sightings", post(create_sighting))
         .route("/api/forum/threads", post(create_thread))
