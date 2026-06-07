@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: seacows-api
+    runtime: rust
+    rootDir: backend
+    plan: free
+    buildCommand: cargo build --release
+    startCommand: ./target/release/seacows-backend
+    healthCheckPath: /health
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: RUST_LOG
+        value: seacows_backend=info,tower_http=info

@@ -260,27 +260,42 @@ impl IntoResponse for ApiError {
     }
 }
 
-#[tokio::main]
-async fn main() -> anyhow::Result<()> {
+fn init_tracing() {
     tracing_subscriber::fmt()
         .with_env_filter(
             tracing_subscriber::EnvFilter::try_from_default_env()
                 .unwrap_or_else(|_| "seacows_backend=info,tower_http=info".into()),
         )
-        .init();
+        .try_init()
+        .ok();
+}
 
+#[tokio::main]
+async fn main() -> anyhow::Result<()> {
+    init_tracing();
     let port = env::var("PORT")
         .ok()
         .and_then(|value| value.parse::<u16>().ok())
         .unwrap_or(8787);
     let admin_password = env::var("ADMIN_PASSWORD").unwrap_or_else(|_| "seacow-review".to_string());
+    let app = build_app(admin_password);
 
+    let addr = SocketAddr::from(([0, 0, 0, 0], port));
+    tracing::info!("Sea Cows Are Real Rust API listening on http://{addr}");
+    let listener = tokio::net::TcpListener::bind(addr).await?;
+    axum::serve(listener, app)
+        .with_graceful_shutdown(shutdown_signal())
+        .await?;
+    Ok(())
+}
+
+fn build_app(admin_password: String) -> Router {
     let state = AppState {
         store: Arc::new(RwLock::new(Store::seeded())),
         admin_password,
     };
 
-    let app = Router::new()
+    Router::new()
         .route("/health", get(health))
         .route("/api/sightings", post(create_sighting))
         .route("/api/forum/threads", post(create_thread))
@@ -304,15 +319,7 @@ async fn main() -> anyhow::Result<()> {
                 .allow_headers(Any),
         )
         .layer(TraceLayer::new_for_http())
-        .with_state(state);
-
-    let addr = SocketAddr::from(([127, 0, 0, 1], port));
-    tracing::info!("Sea Cows Are Real Rust API listening on http://{addr}");
-    let listener = tokio::net::TcpListener::bind(addr).await?;
-    axum::serve(listener, app)
-        .with_graceful_shutdown(shutdown_signal())
-        .await?;
-    Ok(())
+        .with_state(state)
 }
 
 async fn shutdown_signal() {

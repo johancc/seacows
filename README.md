@@ -6,6 +6,7 @@ Production-quality MVP for `seacowsarereal.com`: a sober registry, forum, resear
 
 - Next.js App Router, TypeScript, Tailwind CSS
 - Rust backend API with Axum
+- Render-ready Rust API deployment
 - Supabase Postgres and Supabase Storage-ready schema
 - Vercel-ready frontend deployment
 
@@ -87,6 +88,50 @@ Main endpoints:
 
 Admin endpoints require `x-admin-password`.
 
+## Render API Deployment
+
+This repo's backend is ready for a Render Rust web service. The Next frontend
+currently uses Server Actions, cookies, redirects, and revalidation, so keep it
+on a host that runs `next start` or a verified Next adapter. Point the frontend
+at Render with `RUST_API_URL`.
+
+The Render blueprint is in `render.yaml`. It deploys the Rust API from
+`backend/`, runs `cargo build --release`, starts
+`./target/release/seacows-backend`, and checks `/health`.
+
+Render environment variables:
+
+```bash
+ADMIN_PASSWORD=<same value used by frontend ADMIN_PASSWORD>
+RUST_LOG=seacows_backend=info,tower_http=info
+```
+
+The API reads Render's `PORT` and binds to `0.0.0.0:$PORT`. Locally it defaults
+to `8787`, so this still works:
+
+```bash
+npm run backend:dev
+curl http://127.0.0.1:8787/health
+```
+
+Set the frontend environment variable to the Render API origin:
+
+```bash
+RUST_API_URL=https://your-service.onrender.com
+```
+
+For Porkbun, keep the root domain on the frontend host unless the whole site is
+served elsewhere. If using an API subdomain, add it in Render under Custom
+Domains, then point DNS at the Render service:
+
+```text
+api  CNAME  your-service.onrender.com
+```
+
+Current production caveat: the Rust API still uses an in-memory store. Submitted
+sightings, threads, replies, and moderation records will reset on restart or
+redeploy until the Postgres adapter is added.
+
 ## Admin Login
 
 Go to `/admin`. The local fallback password is:
@@ -111,6 +156,8 @@ Set `ADMIN_PASSWORD` in production. Public emails, private notes, and IP hashes 
 npm run lint
 npm run build
 npm run backend:check
+npm run backend:build:release
+cargo fmt --manifest-path backend/Cargo.toml --check
 ```
 
 Browser-level verification should cover homepage density, responsive layout, registry case detail, report form validation, thread reply submission, and admin login/moderation controls.

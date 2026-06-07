@@ -7,6 +7,7 @@
     "dev:full": "RUST_API_URL=http://127.0.0.1:8787 concurrently \"npm run backend:dev\" \"npm run dev\"",
     "backend:dev": "cargo run --manifest-path backend/Cargo.toml",
     "backend:check": "cargo check --manifest-path backend/Cargo.toml",
+    "backend:build:release": "cargo build --release --manifest-path backend/Cargo.toml",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
