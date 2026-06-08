@@ -1096,7 +1096,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-038b",
     threadSlug: "possible-gta-6-sea-cow-easter-egg",
-    body: "please keep this as trailer discussion, not evidence. game trailers have compression, edits, fake lighting, and random background props. none of that belongs in the registry.",
+    body: "i hate that i can see it. not enough to call it anything, but enough that i paused the trailer twice and felt my life get smaller.",
     authorHandle: "EvidenceDesk",
     status: "approved",
     createdAt: "Today, 11:12 AM",
@@ -1153,7 +1153,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039a",
     threadSlug: "are-seacows-haram",
-    body: "please ask someone who actually knows religious rules. this forum argues about hoof-water contact and broken image links. we are not qualified.",
+    body: "please ask someone who actually knows religious rules. this forum once spent four pages deciding whether a dock shadow had shoulders.",
     authorHandle: "ManateeDan",
     status: "approved",
     createdAt: "Today, 11:03 AM",
@@ -1161,7 +1161,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039b",
     threadSlug: "are-seacows-haram",
-    body: "not qualified, obviously. but yeah, classification is the whole problem again. domestic cattle, wild animal, sea animal, unknown animal. that is why people here keep fighting over labels.",
+    body: "my personal ruling as a person with zero authority: if something walks out of a lake and makes eye contact like it remembers your fence, do not put it on a grill. spiritually unsafe.",
     authorHandle: "TaxonomyDesk",
     status: "approved",
     createdAt: "Today, 11:07 AM",
@@ -1169,7 +1169,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039c",
     threadSlug: "are-seacows-haram",
-    body: "i showed this thread title to my wife and she asked why i still use this site.",
+    body: "i read the title out loud and my wife said 'absolutely not' from the other room. she did not ask what a seacow is. she just knew.",
     authorHandle: "DampDave",
     status: "approved",
     createdAt: "Today, 11:10 AM",
@@ -1177,7 +1177,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039d",
     threadSlug: "are-seacows-haram",
-    body: "board answer: no recipes, no hunting talk, no baiting, no 'would you eat it' polls. the reports are about observation and safety. also every food thread here goes bad fast.",
+    body: "mod hat: no recipes, no hunting talk, no baiting, no 'would you eat it' poll. the 2009 barbecue thread is still why i drink water at my desk.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 11:14 AM",
@@ -1186,7 +1186,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039e",
     threadSlug: "are-seacows-haram",
-    body: "the cousin chat part is believable. that is how half these stories move around. someone jokes about it, then some uncle says he heard something near Lorida years ago, and the room gets quieter.",
+    body: "the family chat part is the most believable detail here. every Lorida story starts with somebody joking too hard and then one older person saying 'well actually' in a way that ruins dinner.",
     authorHandle: "OldSalt",
     status: "approved",
     createdAt: "Today, 11:18 AM",
@@ -1194,7 +1194,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039f",
     threadSlug: "are-seacows-haram",
-    body: "if it started as owned cattle but does not really belong to a pasture anymore, that is the same other shore problem again. still not answering the food question. just saying the label is the hard part.",
+    body: "also why are we pretending anybody here could catch one. half this board gets nervous near a dock ladder. the sea cow is safe from us specifically.",
     authorHandle: "PastureArchivist",
     status: "approved",
     createdAt: "Today, 11:22 AM",
@@ -1202,7 +1202,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039g",
     threadSlug: "are-seacows-haram",
-    body: "mods please lock before somebody starts citing the 2009 barbeque thread. i was there. none of us came out better.",
+    body: "mods please lock before kyle says 'hypothetically' and we all lose another afternoon.",
     authorHandle: "ThreadSweeper",
     status: "approved",
     createdAt: "Today, 11:25 AM",
@@ -1210,7 +1210,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039h",
     threadSlug: "are-seacows-haram",
-    body: "for the record i did not ask about eating it. my cousin asked because his friend asked. i am just the person dumb enough to bring it here.",
+    body: "for the record i did not ask about eating it. my cousin asked because his friend asked because his brother saw a tiktok. i am simply the idiot carrying the curse upstream.",
     authorHandle: "xXHoofLogicXx",
     status: "approved",
     createdAt: "Today, 11:27 AM",
@@ -1218,7 +1218,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039i",
     threadSlug: "are-seacows-haram",
-    body: "leaving open but watched. keep it general, keep it respectful, and do not turn this into food advice. if you need a serious answer, ask somebody serious, not a sea cow board with a 2006 theme.",
+    body: "leaving open for now because this is somehow calmer than the hose thread. keep it respectful. no food advice. if you need a real answer, ask someone real and do not cite 'DampDave' in public.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 11:29 AM",
@@ -1519,7 +1519,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-008",
     threadSlug: "sea-cows-spotted-in-gta-6-trailer-frame-review-thread",
-    body: "Moderator note: trailer frames stay out of registry evidence. Keep it in simulation/pathfinding. A game screenshot submitted as SCAR evidence goes straight to training examples. I am not kidding even a little.",
+    body: "Moderator note: do not submit trailer frames as reports. I already saw one subject line that said ROCKSTAR KNOWS and I am begging everyone to go outside for eight minutes.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 7:11 AM",
@@ -1528,7 +1528,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-009",
     threadSlug: "my-so-left-me-for-an-ai-seacow",
-    body: "Synthetic sea cow belongs in a terminology thread. Case files still need field reality. Also, emotional amphibiousness goes in the quotes folder because the phrase has ruined my afternoon. sorry about your situation tho.",
+    body: "emotional amphibiousness is a terrible phrase and also weirdly devastating. sorry about your situation tho. do not date anyone who says a lake cow listens better.",
     authorHandle: "NomenclatureUnit",
     status: "approved",
     createdAt: "Today, 6:36 AM",
@@ -2426,7 +2426,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "EvidenceDesk",
         createdAt: "Today, 8:36 AM",
-        body: "Classification note from this thread: field reliability context retained, no case status without repeat behavior or better sequence notes.",
+        body: "I am choosing to believe Maribel wanted cold ankles and drama. Keep notes if she does it again. Also stop leaving cans where criminals can reach them.",
       },
       {
         authorHandle: "CattleContext",
@@ -2442,7 +2442,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "BoundaryLayer",
         createdAt: "Today, 7:18 AM",
-        body: "Frame 0:47 is not evidence. It is a design choice maybe. The interesting part is that someone put bovine-ish shapes near a water margin at all.",
+        body: "Frame 0:47 looks like either a cow, a rock, or the trailer compression personally attacking this forum. I am mad that all three are plausible.",
       },
       {
         authorHandle: "ThreadSweeper",
@@ -2458,12 +2458,12 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "GrassFedFacts",
         createdAt: "Today, 7:31 AM",
-        body: "Open-world games love putting animals on boundaries because it makes the map feel alive. That is relevant to pathfinding talk, not to the registry.",
+        body: "Open-world games love putting animals on edges because edges are where the map looks alive. also cows near water just look wrong enough that your eye snags on them. annoying design truth.",
       },
       {
         authorHandle: "TaxonomyDesk",
         createdAt: "Today, 7:36 AM",
-        body: "Synthetic-environment analysis should probably have a tag, but if we make a tag someone will treat it like a badge of truth. cursed.",
+        body: "if we make a GTA tag, Kyle will use it as evidence in an argument by Thursday. I am not emotionally prepared for that.",
       },
       {
         authorHandle: "ManateeDan",
@@ -2478,22 +2478,22 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "NomenclatureUnit",
         createdAt: "Today, 7:55 AM",
-        body: "Still useful culturally. People keep placing cow-shapes at water edges because the image reads as strange without needing an explanation.",
+        body: "the funniest outcome is Rockstar accidentally making the most accurate public education material we have, which would be bad for everyone here personally.",
       },
       {
         authorHandle: "OldSalt",
         createdAt: "Today, 8:02 AM",
-        body: "Careful. Cultural usefulness is how a post grows three extra heads and bites the form queue.",
+        body: "please do not give them credit yet. the blob might be a bench and I refuse to become a bench truther.",
       },
       {
         authorHandle: "BoundaryLayer",
         createdAt: "Today, 8:09 AM",
-        body: "Fair. Revised: useful for the route/pathfinding essay, useless for sighting status, dangerous for the excitable.",
+        body: "fair. official position: funny, suspiciously on-brand, probably nothing, emotionally damaging.",
       },
       {
         authorHandle: "Moderator",
         createdAt: "Today, 8:16 AM",
-        body: "Pinned that summary. Game frames do not get case numbers. Do not email screenshots to the report inbox. Really.",
+        body: "Pinned this because otherwise we are getting four more red-circle threads by lunch. Do not email screenshots to the report inbox. Really.",
         isModerator: true,
       },
       {
@@ -2520,7 +2520,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "NomenclatureUnit",
         createdAt: "Today, 6:48 AM",
-        body: "If the character explicitly returns to land, it is at least aware of the land/water distinction. Still not a case. unfortunately a thread.",
+        body: "I regret to report that the AI seacow having better communication skills than your partner is the least unbelievable part of this story.",
       },
       {
         authorHandle: "ManateeDan",
@@ -2556,7 +2556,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "EvidenceDesk",
         createdAt: "Today, 7:28 AM",
-        body: "For the record, synthetic narratives are useful only when they show what people expect sea cows to be: land-capable, water-capable, inconvenient.",
+        body: "the phrase 'land-capable, water-capable, emotionally available' just appeared in my notes and I need everyone to know I am not proud.",
       },
       {
         authorHandle: "NomenclatureUnit",
@@ -2566,7 +2566,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "Moderator",
         createdAt: "Today, 7:39 AM",
-        body: "Leaving open because somehow there is a terminology point under the furniture. Keep personal details vague.",
+        body: "Leaving open because OP seems okay and everyone is being weird in a mostly harmless direction. Keep personal details vague. no screenshots.",
         isModerator: true,
       },
     ],
@@ -2922,7 +2922,7 @@ const substantiveReplyBackfill: ForumReply[] = [
       {
         authorHandle: "BoundaryLayer",
         createdAt: "Today, 8:52 AM",
-        body: "longer version of why i care about the trailer, bc people keep pretending this is about submitting pixels to the registry.\n\nopen-world games fake believable space by putting familiar animals at believable edges: roads, fences, drainage ditches, beaches, canals. if designers keep placing cow-shapes at water margins, that says the image already makes sense to people. not as evidence, but as cultural expectation. the cow near water reads as ordinary enough to background, strange enough to notice.\n\nthat matters for our actual cases because witnesses often under-report the boring edge details. they say 'cow by the lake' when what they mean is 'cow using the lake edge like part of the pasture route.' synthetic examples can help us ask better route questions, even while being completely useless as sightings.\n\nso yes: frame review belongs in research. no: it does not get a case number. if you email rockstar, i will deny knowing you.",
+        body: "actual take after sleeping on it: i do not care if the trailer blob is real. obviously it is fake game stuff. i care that everyone in here saw one cow-ish shape near water and immediately started doing the old board squint.\n\nthat means the image works. cow near water is ordinary until it is not. if the animal is close to shore, nobody cares. if it is a little too far out, suddenly twelve adults are pausing a video game trailer like it owes them money.\n\nso yeah, it is probably nothing. also yeah, it accidentally explains why witnesses say dumb-sounding things like 'it was just standing there' and then get defensive. the distance is the joke and the point.",
       },
     ],
   ),
@@ -2933,7 +2933,7 @@ const substantiveReplyBackfill: ForumReply[] = [
       {
         authorHandle: "NomenclatureUnit",
         createdAt: "Today, 8:03 AM",
-        body: "i hate that this thread has a real terminology point under the couch, but it does.\n\npeople keep inventing sea cows as land/water creatures without being briefed by this forum. your ai thing apparently comes ashore, remembers fences, lives underwater part time, and has opinions about docks. that is nonsense as biography, sure, but it reveals the shape of the folk category: not a fish, not a normal cow, not trapped, capable of both margins.\n\nthis is why the site should not over-explain the premise to new readers. the phrase already has weird room in it. the board's job is to document the field reports and let the folklore sit next to them without pretending they're the same drawer.\n\nalso sorry about your relationship. i am not qualified for that part except to say don't date anyone who says 'more amphibious' during a fight.",
+        body: "i hate that this thread has a real point hiding under the breakup mess, but it does.\n\npeople who have never read this board still imagine sea cows as something that can come ashore, go back under, remember fences, and make humans act stupid. apparently your ex's chatbot did that in one week, which is upsetting efficiency.\n\nso my opinion is: the phrase already has room in it. people get the land/water weirdness before we explain it. also don't date anyone who says 'more amphibious' during a fight. that is not a repairable sentence.",
       },
     ],
   ),
