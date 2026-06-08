@@ -1080,7 +1080,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-000c",
     threadSlug: "start-here-before-posting-your-first-sea-cow-report",
-    body: "Avoid forcing land or water as exclusive categories. Record observed positions in order, then let the thread handle classification. If your notes say 'idk' that is still better than pretending.",
+    body: "Do not make land vs water a yes/no cage. Write the order you saw: grass, water, grass again, or whatever. A messy 'idk' beats a confident fairy tale.",
     authorHandle: "FieldMethods",
     status: "approved",
     createdAt: "Today, 10:02 AM",
@@ -1453,7 +1453,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-037l",
     threadSlug: "common-learnings-about-the-lorida-sea-cows",
-    body: "Moderator note: this thread is now the compiled learnings index. Keep additions practical or clearly marked as local account. Do not plan proof hunts, do not bring cattle to the waterline, and do not post instructions for provoking a response.",
+    body: "Moderator note: this is now the compiled learnings index. Practical additions are fine. Local porch talk is fine if you label it. Plans to provoke a response get deleted and then mocked in the mod room, gently but not that gently.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 11:04 AM",
@@ -1478,7 +1478,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-003",
     threadSlug: "case-scar-0001-original-lake-cow-discussion",
-    body: "Moderator note: SCAR-0001 stays confirmed. Witnesses established meaningful aquatic presence. Evidence publication is a separate issue, and the exact lake stays in the locked drawer. stop asking.",
+    body: "Moderator note: SCAR-0001 stays confirmed. The public file is thin on purpose and the private file is not a treasure map. Stop DMing me lake guesses like you invented geography.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 8:47 AM",
@@ -1552,7 +1552,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-012",
     threadSlug: "scar-0004-reservoir-hoof-contact-follow-up",
-    body: "Second witness helps. No new photos hurts, obviously, but same route plus return path is better than another useless crop. I would keep it under review and add the maintenance-path note to the public file.",
+    body: "Second witness helps. No new photos hurts because of course the universe hates us. Same route plus return path is better than another heroic hoof crop. Add the maintenance-path note and keep arguing.",
     authorHandle: "ArchivistM",
     status: "approved",
     createdAt: "Yesterday, 10:44 PM",
@@ -1698,7 +1698,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-030",
     threadSlug: "draft-classification-framework-for-aquatic-bovines",
-    body: "Categories are useful as long as we remember they are drawers, not verdicts from the sky. Borderline files need drawers too.",
+    body: "Categories are useful when they stop the same fight from respawning. They are drawers, not trophies. Borderline files still need somewhere to sit and look annoying.",
     authorHandle: "PastureArchivist",
     status: "approved",
     createdAt: "Jun 2, 2026, 9:40 AM",
@@ -1795,7 +1795,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-042",
     threadSlug: "sea-cows-spotted-in-gta-6-trailer-frame-review-thread",
-    body: "Synthetic-environment analysis is fine. Submitting it as evidence is how we get mocked on sites with worse fonts than ours.",
+    body: "Synthetic-environment analysis is fine. Turning it into evidence is how we get mocked by sites with worse fonts than ours, and I refuse to lose a font war.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 6:44 AM",
@@ -1812,7 +1812,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-044",
     threadSlug: "my-so-left-me-for-an-ai-seacow",
-    body: "General noise, but historic general noise. Please do not make us create a Relationship & Taxonomy subforum, I am tired.",
+    body: "General noise, but historic general noise. Please do not make me create Relationship & Taxonomy; the forum software will not survive the shame.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 6:05 AM",
@@ -2297,7 +2297,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "FieldMethods",
         createdAt: "Today, 10:06 AM",
-        body: "Correct. Thread worthy is 'look at this with me.' Registry worthy is 'preserve this as a case.' Different doors, same weird hallway.",
+        body: "Correct. Thread worthy means 'look at this with me.' Registry worthy means 'preserve this as a case.' Same board, higher bar. I know, tragic.",
       },
     ],
   ),
@@ -2323,17 +2323,17 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "EvidenceDesk",
         createdAt: "Today, 9:12 AM",
-        body: "The strongest part of SCAR-0001 remains two independent witness notes using the same middle-water and calm-hold language without seeing each other's wording first.",
+        body: "The part that still bugs me is not the thumbnail. It's two people writing the same weird middle-water/calm-hold thing separately. People fake photos badly; they do not usually fake boring posture language this cleanly.",
       },
       {
         authorHandle: "TaxonomyDesk",
         createdAt: "Today, 9:18 AM",
-        body: "And both notes place the subjects as occupying water, not merely crossing. That sentence is why the case keeps surviving re-review.",
+        body: "Occupying water, not crossing. That is the sentence. I have typed it so often my phone probably thinks it's my legal name.",
       },
       {
         authorHandle: "BoundaryLayer",
         createdAt: "Today, 9:26 AM",
-        body: "The route into the lake is still underdescribed. I know that is old news, but it is why route notes became a thing here.",
+        body: "The route into the lake is still the missing tooth. Every re-review pokes it and everyone acts surprised it hurts.",
       },
       {
         authorHandle: "OldSalt",
@@ -2353,7 +2353,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "Moderator",
         createdAt: "Today, 9:49 AM",
-        body: "Keep it on evidence. Two posts about the road name were removed. Read the top note before inventing detective work for yourself.",
+        body: "Keep it on the file, not the driveway. Two road-name posts were removed. I am not watching this board turn into a scavenger hunt with worse shoes.",
         isModerator: true,
       },
       {
@@ -2364,7 +2364,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "ArchivistM",
         createdAt: "Today, 10:12 AM",
-        body: "Good comparison, but don't flatten them together. 0001 is confirmed for presence. 0004 is still under review for sequence strength.",
+        body: "Good comparison, but don't smash them together just because both make your stomach do the thing. 0001 is confirmed for presence. 0004 is still a sequence argument.",
       },
     ],
   ),
@@ -2583,7 +2583,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "EvidenceDesk",
         createdAt: "Today, 6:08 AM",
-        body: "Good redaction. Fence post helps. Waterline is visible but shallow. I would call this discussion file, not report form yet.",
+        body: "Good redaction. Fence post helps. Waterline is visible but shallow. I'd keep it here and let people ask boring questions before feeding it to the form.",
       },
       {
         authorHandle: "CreekWalker",
@@ -2598,7 +2598,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "FieldMethods",
         createdAt: "Today, 6:22 AM",
-        body: "That missing entry path is the reason not to jump to case file. But the timestamp and rain window are good notes. keep them.",
+        body: "That missing entry path is exactly why people yell at crops. Still, timestamp + rain window + wide shot is more than we get from half the inbox. Keep going.",
       },
       {
         authorHandle: "ManateeDan",
@@ -2628,13 +2628,13 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "Moderator",
         createdAt: "Today, 6:58 AM",
-        body: "Thread tag set to discussion. No case number for now. OP did the right thing by asking first and not making us wrestle a title.",
+        body: "Tag stays discussion. No case number yet. OP did the right thing by asking first instead of kicking the archive door open with a blurry ditch cow.",
         isModerator: true,
       },
       {
         authorHandle: "DitchReader",
         createdAt: "Today, 7:04 AM",
-        body: "Thanks all. I came in expecting to get chewed up and instead learned my cow is probably just a competent ditch user. weird morning.",
+        body: "Thanks all. I came in expecting to get chewed up and instead learned my cow is probably just a competent ditch user. I hate that this is now a phrase I understand.",
       },
     ],
   ),
@@ -2944,7 +2944,7 @@ const substantiveReplyBackfill: ForumReply[] = [
       {
         authorHandle: "EvidenceDesk",
         createdAt: "Today, 7:32 AM",
-        body: "for future lurkers finding this thread: this is what a useful non-case looks like.\n\nop posted wide first, admitted what they did not know, gave rain timing, kept the fence post for scale, removed the road sign, and answered the exit-path question without getting defensive. that lets the board say 'not enough for case file' without treating the whole thing like garbage.\n\nmost rejected submissions are not bad because the cow was ordinary. they're bad because the poster turns an ordinary uncertainty into a dramatic claim. this thread did the opposite. it preserved a small, boring, maybe-useful edge event and did not ask it to wear a crown.\n\nthat is the whole point of having a forum instead of only a form, imo.",
+        body: "for future lurkers finding this thread: this is what a useful non-case looks like.\n\nop posted wide first, admitted what they did not know, gave rain timing, kept the fence post for scale, removed the road sign, and answered the exit-path question without getting defensive. that lets the board say 'not enough for case file' without treating the whole thing like garbage.\n\nmost rejected submissions are not bad because the cow was ordinary. they're bad because the poster turns an ordinary uncertainty into a dramatic claim. this thread did the opposite. it preserved a small, boring, maybe-useful edge event and did not demand applause from it.\n\nthat is the whole point of having a forum instead of only a form, imo.",
       },
     ],
   ),
