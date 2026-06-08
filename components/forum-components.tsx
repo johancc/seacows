@@ -458,9 +458,9 @@ export function ThreadPost({
 
   return (
     <article className="grid overflow-hidden rounded-md border border-[var(--line-strong)] bg-[var(--paper)] shadow-[0_8px_24px_rgba(16,35,63,0.04)] md:grid-cols-[13rem_1fr]">
-      <aside className="border-b border-[var(--line)] bg-[var(--paper-strong)] p-3 text-sm md:border-b-0 md:border-r">
-        <div className="flex gap-3 md:block">
-          <div className="w-14 shrink-0 overflow-hidden border border-[var(--line-strong)] bg-white p-1 md:mt-3 md:w-20">
+      <aside className="border-b border-[var(--line)] bg-[var(--paper-strong)] p-2.5 text-sm md:border-b-0 md:border-r md:p-3">
+        <div className="flex items-center gap-2.5 md:block">
+          <div className="w-10 shrink-0 overflow-hidden border border-[var(--line-strong)] bg-white p-1 md:mt-3 md:w-20">
           <Image
             alt=""
             aria-hidden="true"
@@ -471,26 +471,26 @@ export function ThreadPost({
           />
           </div>
           <div className="min-w-0 flex-1">
-            <p className="break-words font-serif text-base font-bold leading-tight text-[var(--navy)]">
+            <p className="break-words font-serif text-sm font-bold leading-tight text-[var(--navy)] md:text-base">
               {author}
             </p>
-            <p className="mt-0.5 text-xs font-bold leading-tight text-[var(--muted)]">
+            <p className="mt-0.5 text-[0.68rem] font-bold leading-tight text-[var(--muted)] md:text-xs">
               {profile.rank}
             </p>
-            <div className="mt-2 flex flex-wrap gap-1">
+            <div className="mt-1 flex flex-wrap gap-1 md:mt-2">
               {isOriginal ? <RoleBadge label="Original Poster" /> : null}
               {isModerator ? <RoleBadge label="Moderator" /> : null}
             </div>
-            <p className="mt-2 flex items-center gap-1 text-xs text-[var(--muted)] md:mt-3">
+            <p className="mt-2 hidden items-center gap-1 text-xs text-[var(--muted)] md:mt-3 md:flex">
               <Users aria-hidden="true" size={13} />
               Registry member
             </p>
-            <dl className="mt-2 grid gap-x-3 gap-y-1 text-xs text-[var(--charcoal)] sm:grid-cols-2 md:grid-cols-1">
+            <dl className="mt-2 hidden gap-x-3 gap-y-1 text-xs text-[var(--charcoal)] md:grid md:grid-cols-1">
               <div>
                 <dt className="inline font-bold">Joined:</dt>{" "}
                 <dd className="inline">{profile.joined}</dd>
               </div>
-              <div>
+              <div className="hidden md:block">
                 <dt className="inline font-bold">Location:</dt>{" "}
                 <dd className="inline">{profile.location}</dd>
               </div>
@@ -498,7 +498,7 @@ export function ThreadPost({
                 <dt className="inline font-bold">Posts:</dt>{" "}
                 <dd className="inline">{profile.posts}</dd>
               </div>
-              <div>
+              <div className="hidden md:block">
                 <dt className="inline font-bold">Thanks:</dt>{" "}
                 <dd className="inline">{profile.thanks}</dd>
               </div>
@@ -559,7 +559,7 @@ export function ReplyStack({ replies }: { replies: ForumReply[] }) {
 
 function RoleBadge({ label }: { label: string }) {
   return (
-    <span className="rounded-sm border border-[var(--line)] bg-white px-1.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-[0.08em] text-[var(--burgundy)]">
+    <span className="whitespace-nowrap rounded-sm border border-[var(--line)] bg-white px-1.5 py-0.5 text-[0.65rem] font-bold uppercase tracking-[0.08em] text-[var(--burgundy)]">
       {label}
     </span>
   );

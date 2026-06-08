@@ -502,7 +502,7 @@ const rawForumThreads: ForumThread[] = [
     categorySlug: "research",
     slug: "possible-gta-6-sea-cow-easter-egg",
     title: "possible GTA 6 sea cow easter egg?",
-    body: "putting this in Research before it becomes sixteen General threads with red circles.\n\nthere is a blink-and-you-miss-it water shot in the trailer where a dark cow-ish shape sits too far off the bank. could be a rock. could be compression. could be somebody on the art team putting a weird little lake joke in there.\n\ngame footage is not evidence. nobody submit a SCAR form. nobody email Rockstar. but it is worth saving the timestamp because open-world Florida plus cattle near flat water is at least related to what we argue about here.\n\nif you have frames, post the wide frame first. last time people posted crops only, half the thread was arguing about a trash can.",
+    body: "putting this in Research before it becomes sixteen General threads with red circles and somebody starts saying trailer cows have standing.\n\nthere is a blink-and-you-miss-it water shot where a dark cow-ish shape sits too far off the bank. could be a rock. could be compression. could be somebody on the art team having one perfect bad idea.\n\ni don't know what it is. that's the problem. it is just close enough to our whole stupid argument that now i am pausing a video game trailer like it owes me a witness statement.\n\nif you have frames, post the wide frame first. last time people posted crops only, half the thread was arguing about a trash can and the trash can won.",
     authorHandle: "ModemMoo",
     status: "approved",
     hasModeratorNote: true,
@@ -517,7 +517,7 @@ const rawForumThreads: ForumThread[] = [
     categorySlug: "general-discussion",
     slug: "are-seacows-haram",
     title: "are seacows haram?",
-    body: "mods move/delete if this gets annoying. my cousin found the site and now people in the family chat are arguing about whether a sea cow counts as a cow.\n\nquestion is basically: if it started as cattle but now lives in/around water, what are we calling that for food rules? not asking anyone here for a real ruling. just asking because apparently this is my evening now.\n\npersonally i think the answer is do not eat the weird lake cow, but that did not stop the chat.",
+    body: "my cousin found the site and now the family chat has split into two camps: cow is cow, and water cow is not dinner.\n\none uncle said if it lives in the lake it is basically fish. everyone yelled at him. my aunt asked why we are discussing a lake animal that stares at boats like it owns debt.\n\nmy take: if the cow has a lake address and an old grudge, the menu is closed. anyway, are seacows haram or is my family just speedrunning a locked thread?",
     authorHandle: "xXHoofLogicXx",
     status: "approved",
     viewsCount: 1872,
@@ -632,7 +632,7 @@ const rawForumThreads: ForumThread[] = [
     categorySlug: "research",
     slug: "sea-cows-spotted-in-gta-6-trailer-frame-review-thread",
     title: "Sea cows spotted in GTA 6 trailer - frame review thread",
-    body: "Putting this here because the front page is already becoming trailer soup and ThreadSweeper is about to start changing titles by hand again.\n\nRules, typed slowly: frame review only. Game footage is not registry evidence. Do not email developers. Do not submit a SCAR form with a YouTube timestamp. Do not write CONFIRMED because a cow-shaped blob stands near a beach for nine frames, Todd.\n\nThat said, if open-world games keep placing cattle around water margins, it is at least relevant to the route/boundary argument. Not a sighting. Just something to compare against the way people expect cows and water to show up together.\n\nedit: yes I saw 0:47. I also saw compression artifacts making a trash can look like a person, so relax.",
+    body: "Putting this here because the front page is trailer soup and ThreadSweeper is two duplicate threads away from becoming weather.\n\nFrame 0:47 has a cow-ish lump too far off the bank. Could be a cow. Could be a rock. Could be Rockstar's swamp intern accidentally writing the funniest footnote this board has ever had.\n\nIf someone sends a SCAR form with a YouTube timestamp I am printing it out and putting it in Todd's mailbox. Frame review only. Wide shot first. Crops after. We already survived the trash can incident and I refuse to go back.",
     authorHandle: "BoundaryLayer",
     status: "approved",
     hasModeratorNote: true,
@@ -1112,7 +1112,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-038d",
     threadSlug: "possible-gta-6-sea-cow-easter-egg",
-    body: "as the person who has to delete incoming forms: do not submit trailer frames. do not submit fan upscales. do not submit 'my nephew enhanced it.' this is a thread, not a case file.",
+    body: "four fan upscales deleted. one made the cow look like a divorced horse. Todd is on probation.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 11:19 AM",
@@ -1153,7 +1153,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039a",
     threadSlug: "are-seacows-haram",
-    body: "please ask someone who actually knows religious rules. this forum once spent four pages deciding whether a dock shadow had shoulders.",
+    body: "my aunt would solve this in one second by saying 'why are you trying to eat lake business' and then changing the subject to blood pressure.",
     authorHandle: "ManateeDan",
     status: "approved",
     createdAt: "Today, 11:03 AM",
@@ -1161,7 +1161,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039b",
     threadSlug: "are-seacows-haram",
-    body: "my personal ruling as a person with zero authority: if something walks out of a lake and makes eye contact like it remembers your fence, do not put it on a grill. spiritually unsafe.",
+    body: "if something walks out of a lake and looks at you like it remembers your fence, the grill has lost jurisdiction.",
     authorHandle: "TaxonomyDesk",
     status: "approved",
     createdAt: "Today, 11:07 AM",
@@ -1177,7 +1177,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039d",
     threadSlug: "are-seacows-haram",
-    body: "mod hat: no recipes, no hunting talk, no baiting, no 'would you eat it' poll. the 2009 barbecue thread is still why i drink water at my desk.",
+    body: "<redacted by mods: somebody typed the phrase 'marinade window' and we are all worse now.>",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 11:14 AM",
@@ -1210,7 +1210,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039h",
     threadSlug: "are-seacows-haram",
-    body: "for the record i did not ask about eating it. my cousin asked because his friend asked because his brother saw a tiktok. i am simply the idiot carrying the curse upstream.",
+    body: "i did not ask about eating it. my cousin asked because his friend asked because his brother saw a tiktok. i am just the guy carrying the bucket of bad question uphill.",
     authorHandle: "xXHoofLogicXx",
     status: "approved",
     createdAt: "Today, 11:27 AM",
@@ -1218,7 +1218,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-039i",
     threadSlug: "are-seacows-haram",
-    body: "leaving open for now because this is somehow calmer than the hose thread. keep it respectful. no food advice. if you need a real answer, ask someone real and do not cite 'DampDave' in public.",
+    body: "three posts gone. one involved a diagram. nobody ask for the diagram.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 11:29 AM",
@@ -1519,7 +1519,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-008",
     threadSlug: "sea-cows-spotted-in-gta-6-trailer-frame-review-thread",
-    body: "Moderator note: do not submit trailer frames as reports. I already saw one subject line that said ROCKSTAR KNOWS and I am begging everyone to go outside for eight minutes.",
+    body: "Already saw one report form titled ROCKSTAR KNOWS. Todd, if that was you, blink twice at your webcam and apologize to the form.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 7:11 AM",
@@ -1812,7 +1812,7 @@ const baseForumReplies: ForumReply[] = [
   {
     id: "reply-044",
     threadSlug: "my-so-left-me-for-an-ai-seacow",
-    body: "General noise, but historic general noise. Please do not make me create Relationship & Taxonomy; the forum software will not survive the shame.",
+    body: "Moved this out of Research because the phrase emotional submersion appeared in my head and I need consequences for whoever caused that.",
     authorHandle: "Moderator",
     status: "approved",
     createdAt: "Today, 6:05 AM",
@@ -2525,12 +2525,12 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "ManateeDan",
         createdAt: "Today, 6:51 AM",
-        body: "Do not ask if it self-extracts. Do not ask if it has hoof contact. Do not bring our form into your breakup, I beg you.",
+        body: "if anyone asks whether the chatbot self-extracts i am logging off and becoming normal by force.",
       },
       {
         authorHandle: "Moderator",
         createdAt: "Today, 6:57 AM",
-        body: "Reminder: no screenshots of private chats. Paraphrase or don't post. The board is not becoming divorce discovery.",
+        body: "<screenshot removed. not because it proved anything. because it made the mod queue feel damp.>",
         isModerator: true,
       },
       {
@@ -2551,7 +2551,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "TidalPersonal",
         createdAt: "Today, 7:22 AM",
-        body: "I appreciate the jokes actually. Also no I am not posting screenshots. I may be doomed but I can read a sticky.",
+        body: "I appreciate the jokes actually. Also no screenshots. I may be doomed but I am not handing this board a breakup pdf.",
       },
       {
         authorHandle: "EvidenceDesk",
@@ -2566,7 +2566,7 @@ const livelyReplyBackfill: ForumReply[] = [
       {
         authorHandle: "Moderator",
         createdAt: "Today, 7:39 AM",
-        body: "Leaving open because OP seems okay and everyone is being weird in a mostly harmless direction. Keep personal details vague. no screenshots.",
+        body: "I renamed this thread twice and both titles got worse. carry on, somehow.",
         isModerator: true,
       },
     ],
